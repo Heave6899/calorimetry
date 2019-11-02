@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Calorimetry</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Style the side navigation */
+.sidenav {
+  height: 100%;
+  width: 200px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+}
+
+
+/* Side navigation links */
+.sidenav a {
+  color: white;
+  padding: 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color on hover */
+.sidenav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Style the content */
+.content {
+  margin-left: 200px;
+  padding-left: 20px;
+}
+table {
+  border-collapse: collapse;
+  width: 29%;
+}
+
+th, td ,p1{
+  text-align: left;
+  padding: 12px;
+}
+
+tr:nth-child(even){background-color: #f2f2f2}
+
+th,p1 {
+  background-color: #4CAF50;
+  color: white;
+}
+</style>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+</head>
+<script src="js/graph.ob.js"></script>
+    <script src="js/graph_logy_use.ob.js"></script>
+	<script src="js/graph.ob.js"></script>
+<script src="js/graph_line_use.ob.js"></script>
+<script src="js/graph_use2.ob.js"></script>
+	
+	  <script src="js/graph.ob.js"></script>
+    <script src="js/graph_logymulti_use.ob.js"></script>
+<body>
+
+<div class="sidenav">
+  <a href="simulation.html">Simulation</a>
+  <a href="otw.html">Observation Table of Water</a>
+  <a href="otc.html">Observation Table of Copper</a>
+  <a href="ott.html">Observation Table of Tungsten</a>
+	  <a href="fc.html">Formulae Used</a>
+
+</div>
+
+<div class="content">
+<div style="float: left; width:30%;">
+
+  <h2>Observation Table of Water</h2>
+	<table class="tg">
+              <tbody class="">
+                <tr class="">
+                  <th class="tg-0pky">Time</th>
+                  <th class="tg-0lax">T</th>
+                  <th class="tg-0lax">lnT</th>
+                </tr>
+                <tr class="">
+                  <td class="tg-0lax">0</td>
+                  <td class="tg-0lax">47.6</td>
+                  <td class="tg-0lax">3.863</td>
+                </tr>
+                <tr class="">
+                  <td class="tg-0lax">15</td>
+                  <td class="tg-0lax">46.9</td>
+                  <td class="tg-0lax">3.85</td>
+                </tr>
+                <tr class="">
+                  <td class="tg-0lax">30</td>
+                  <td class="tg-0lax">46.6</td>
+                  <td class="tg-0lax">3.843</td>
+                </tr>
+                <tr class="">
+                  <td class="tg-0lax">45</td>
+                  <td class="tg-0lax">46.4</td>
+                  <td class="tg-0lax">3.839</td>
+                </tr>
+                <tr class="">
+                  <td class="tg-0lax">60</td>
+                  <td class="tg-0lax">45.9</td>
+                  <td class="tg-0lax">3.828</td>
+                </tr>
+                <tr class="">
+                  <td class="tg-0lax">75</td>
+                  <td class="tg-0lax">45.9</td>
+                  <td class="tg-0lax">3.827</td>
+                </tr>
+                <tr class="">
+                  <td class="tg-0lax">90</td>
+                  <td class="tg-0lax">45.9</td>
+                  <td class="tg-0lax">3.82</td>
+                </tr>
+                <tr class="">
+                  <td class="tg-0lax">105</td>
+                  <td class="tg-0lax">45.3</td>
+                  <td class="tg-0lax">3.815</td>
+                </tr>
+                <tr class="">
+                  <td class="tg-0lax">120</td>
+                  <td class="tg-0lax">45.0</td>
+                  <td class="tg-0lax">3.808</td>
+                </tr>
+                <tr class="">
+                  <td class="tg-0lax">135</td>
+                  <td class="tg-0lax">44.8</td>
+                  <td class="tg-0lax">3.803</td>
+                </tr>
+                <tr class="">
+                  <td class="tg-0lax">150</td>
+                  <td class="tg-0lax">44.7</td>
+                  <td class="tg-0lax">3.8</td>
+                </tr>
+                <tr class="">
+                  <td class="tg-0lax">165</td>
+                  <td class="tg-0lax">44.3</td>
+                  <td class="tg-0lax">3.791</td>
+                </tr>
+                <tr class="">
+                  <td class="tg-0lax">180</td>
+                  <td class="tg-0lax">44.7</td>
+                  <td class="tg-0lax">3.8</td>
+                </tr>
+              </tbody>
+            </table>
+            </div>
+<div style="float:left; padding:3%; width:50%">
+<input type="button" value="Generate Graph" class="btn btn-primary" onClick="generate();"/>
+	<div id="l1" style="width: 700px; height: 450px; padding: 3%;"></div><br><div id="l2"style="width: 700px; height: 450px"></div>
+	</div>
+</div>
+
+
+<script>
+	
+		var data_w=[]; 
+		var data_t=[]; 
+		var data_c=[];
+		
+		data_w.push({x:0 ,y:3.863 });
+		data_w.push({x:15 ,y:3.85 });
+		data_w.push({x:30,y:3.843 });
+		data_w.push({x:45 ,y:3.839 });
+		data_w.push({x:60 ,y:3.828 });
+		data_w.push({x:75 ,y:3.827 });
+		data_w.push({x:90 ,y:3.82});
+		data_w.push({x:105 ,y:3.815 });
+		data_w.push({x:120 ,y:3.808 });
+		data_w.push({x:135 ,y:3.803 });
+		data_w.push({x:150 ,y:3.8 });
+		data_w.push({x:165 ,y:3.791 });
+		data_w.push({x:180 ,y:3.8 });
+		
+		data_t.push({x:0,y:3.83});
+		data_t.push({x:15,y:3.824});
+		data_t.push({x:30,y:3.823});
+		data_t.push({x:45,y:3.82});
+		data_t.push({x:60,y:3.818});
+		data_t.push({x:75,y:3.812});
+		data_t.push({x:90,y:3.811});
+		data_t.push({x:105,y:3.809});
+		data_t.push({x:120,y:3.807});
+		data_t.push({x:135,y:3.804});
+		data_t.push({x:150,y:3.802});
+		data_t.push({x:165,y:3.8});
+		
+		data_c.push({x:0,y:3.852});
+		data_c.push({x:15,y:3.8475});
+		data_c.push({x:30,y:3.8455});
+		data_c.push({x:45,y:3.8445});
+		data_c.push({x:60,y:3.841});
+		data_c.push({x:75,y:3.8395});
+		data_c.push({x:90,y:3.837});
+		data_c.push({x:105,y:3.8375});
+		data_c.push({x:120,y:3.835});
+		data_c.push({x:135,y:3.8351});
+		data_c.push({x:150,y:3.833});
+		data_c.push({x:165,y:3.8305});
+	
+		var data=[];
+        data.push({type:"line",dataPoints:data_c});
+        data.push({type:"line",dataPoints:data_t});
+      
+		function generate(){	//generates the graphs of the metal observations 
+		graphline("l1",data_w,"Time(in sec)","lnT (Water)");
+
+		}
+	//	function compare(){   //compares the two graphs for finding nature of the graph
+	//	drawgraph2("l1",data_c,data_t,"time(sec)","lnT","Comparison of Specific Heat of metals","Copper","Tungsten");
+//	}
+</script>
+</body>
+</html>

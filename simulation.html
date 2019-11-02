@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Calorimetry</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="js/graph.ob.js"></script>
+    <script src="js/graph_logy_use.ob.js"></script>
+	<script src="js/graph.ob.js"></script>
+<script src="js/graph_line_use.ob.js"></script>
+<script src="js/graph_use2.ob.js"></script>
+	
+	  <script src="js/graph.ob.js"></script>
+    <script src="js/graph_logymulti_use.ob.js"></script>
+<style>
+table {
+  border-collapse: collapse;
+  width: 29%;
+}
+
+th, td ,p1{
+  text-align: left;
+  padding: 12px;
+}
+
+tr:nth-child(even){background-color: #f2f2f2}
+
+th,p1 {
+  background-color: #4CAF50;
+  color: white;
+}
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Style the side navigation */
+.sidenav {
+  height: 100%;
+  width: 200px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+}
+
+
+/* Side navigation links */
+.sidenav a {
+  color: white;
+  padding: 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color on hover */
+.sidenav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Style the content */
+.content {
+  margin-left: 200px;
+  padding-left: 20px;
+}
+</style>
+</head>
+<body>
+
+<div class="sidenav">
+  <a href="simulation.html">Simulation</a>     
+  <a href="otw.html">Observation Table of Water</a>
+  <a href="otc.html">Observation Table of Copper</a>
+  <a href="ott.html">Observation Table of Tungsten</a>
+  <a href="fc.html">Formulae Used</a>
+
+</div>
+
+<div class="content">
+  <h2>Simulation</h2>
+  <p>To find specific heat of metals.</p>
+  <form id="ifr"><iframe src="sim/sim.html" height="900px" width="100%" id="ifra" frameborder="0"></iframe></form>
+	
+
+</body>
+</html>
